@@ -1,0 +1,22 @@
+{
+  "name": "form",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hello": "echo\"hello\""
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apis": "^0.1.2",
+    "express": "^4.18.2",
+    "google": "^2.1.0",
+    "google-auth-library": "^8.7.0",
+    "googleapis": "^112.0.0"
+  },
+  "description": ""
+}

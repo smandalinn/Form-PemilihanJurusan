@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Form Pemilihan Mata Pelajaran</title>
+    
+   
+
+</head>
+
+<body>
+    <div class="container">
+        <header>FORM</header>
+
+        <form action="/submit-form" method="post" id="sheetdb-form">
+            
+            <div class=" form" id="myForm">
+                <div class="details" id="details">
+                    <span class="title">Pemilihan Mata Pelajaran</span>
+
+                    
+                
+
+                    <div class="fieldsz">
+                        <div class="input-fieldz">
+                            <label>NIS</label>
+                            <input type="text" name="NIS" id="NIS" placeholder="Masukan NIS"
+                                pattern="^(?!.*(data yang sudah ada)).*$" autocomplete="off" autofocus required>
+                        </div>
+
+                        <div class="input-fieldz">
+                            <label>Nama</label>
+                            <input type="text" name="NAMA" id="nama" placeholder="Masukan Nama" autocomplete="off"
+                                required>
+                        </div>
+
+                        <div class="input-fieldz">
+                            <label>Jenis Kelamin</label>
+                            <select required name="JenisKelamin" id="jenis_kelamin">
+                                <option disabled selected>Pilih-</option>
+                                <option>Laki - Laki</option>
+                                <option>Perempuan</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Matapelajaran Pilihan</label>
+                            <select required id="select" name="Mapel1" onchange="getSelectValue(this.value);">
+                                <option disabled selected>Pilih-</option>
+                                <option value="Informatika">INFORMATIKA</option>
+                                <option value="Fisika">FISIKA</option>
+                                <option value="Kimia">KIMIA</option>
+                                <option value="Biologi">BIOLOGI</option>
+                                <option value="Geografi">GEOGRAFI</option>
+                                <option value="Ekonomi">EKONOMI</option>
+                                <option value="Sosiologi">SOSIOLOGI</option>
+                                <option value="Bahasa Indonesia">BAHASA INDONESIA</option>
+                                <option value="Bahasa Inggris">BAHASA INGGRIS</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nilai</label>
+                            <input type="number" id="nilai" name="Nilai1" placeholder="Masukan Nilai" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Matapelajaran Pilihan</label>
+                            <select required id="select" name="Mapel2" onchange="getSelectValue(this.value);">
+                                <option disabled selected>Pilih-</option>
+                                <option value="Informatika">INFORMATIKA</option>
+                                <option value="Fisika">FISIKA</option>
+                                <option value="Kimia">KIMIA</option>
+                                <option value="Biologi">BIOLOGI</option>
+                                <option value="Geografi">GEOGRAFI</option>
+                                <option value="Ekonomi">EKONOMI</option>
+                                <option value="Sosiologi">SOSIOLOGI</option>
+                                <option value="Bahasa Indonesia">BAHASA INDONESIA</option>
+                                <option value="Bahasa Inggris">BAHASA INGGRIS</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nilai</label>
+                            <input type="number" id="nilai2" name="Nilai2" placeholder="Masukan Nilai" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Matapelajaran Pilihan</label>
+                            <select required id="select" name="Mapel3" onchange="getSelectValue(this.value);">
+                                <option disabled selected>Pilih-</option>
+                                <option value="Informatika">INFORMATIKA</option>
+                                <option value="Fisika">FISIKA</option>
+                                <option value="Kimia">KIMIA</option>
+                                <option value="Biologi">BIOLOGI</option>
+                                <option value="Geografi">GEOGRAFI</option>
+                                <option value="Ekonomi">EKONOMI</option>
+                                <option value="Sosiologi">SOSIOLOGI</option>
+                                <option value="Bahasa Indonesia">BAHASA INDONESIA</option>
+                                <option value="Bahasa Inggris">BAHASA INGGRIS</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nilai</label>
+                            <input type="number" id="nilia" name="Nilai3" placeholder="Masukan Nilai" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Matapelajaran Pilihan</label>
+                            <select required id="select" name="Mapel4" onchange="getSelectValue(this.value);">
+                                <option disabled selected>Pilih-</option>
+                                <option value="Informatika">INFORMATIKA</option>
+                                <option value="Fisika">FISIKA</option>
+                                <option value="Kimia">KIMIA</option>
+                                <option value="Biologi">BIOLOGI</option>
+                                <option value="Geografi">GEOGRAFI</option>
+                                <option value="Ekonomi">EKONOMI</option>
+                                <option value="Sosiologi">SOSIOLOGI</option>
+                                <option value="Bahasa Indonesia">BAHASA INDONESIA</option>
+                                <option value="Bahasa Inggris">BAHASA INGGRIS</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nilai</label>
+                            <input type="number" id="nilai" name="Nilai4" placeholder="Masukan Nilai" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="reset" type="reset" id="resetBtn">
+                    <span class="btnText">Reset</span>
+
+
+
+                </button>
+                <button class="submit" type="submit" id="submitBtn">
+                    <span class="btnText">Submit</span>
+                    <i class="uil uil-navigator"></i>
+
+                </button>
+            </div>
+
+        </form>
+        <p id="error-message"></p>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        function getSelectValue(select) {
+            if (select != '') {
+                $("#select option[value ='" + select + "']").hide();
+                $("#select option[value!='" + select + "']").show();
+            }
+        }
+        </script>
+        
+
+        
+
+
+
+
+
+
+
+
+</body>
+
+</html>
